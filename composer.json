@@ -1,0 +1,42 @@
+{
+  "name": "old-town/workflow-dbal-store",
+  "description": "Workflow Spi Doctrine DBAL Library",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "workflow",
+    "store",
+    "library"
+  ],
+  "minimum-stability": "dev",
+  "homepage": "https://github.com/old-town/workflow-dbal-store",
+  "support": {
+    "email": "kkeanor@gmail.com"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:old-town/old-town-propertyset.git"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:old-town/old-town-log.git"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:old-town/old-town-workflow.git"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "old-town/workflow": "dev-dev",
+    "old-town/propertyset": "dev-dev",
+    "old-town/log": "dev-dev",
+    "doctrine/dbal": "2.5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "OldTown\\Workflow\\Spi\\Dbal": "src/Spi/Dbal"
+    }
+  }
+}
