@@ -36,7 +36,7 @@
   },
   "autoload": {
     "psr-4": {
-      "OldTown\\Workflow\\Spi\\Dbal": "src/Spi/Dbal"
+      "OldTown\\Workflow\\Spi\\Dbal\\": "src/Spi/Dbal"
     }
   }
 }
