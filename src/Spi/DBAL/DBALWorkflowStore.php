@@ -548,10 +548,13 @@ class DBALWorkflowStore implements WorkflowStoreInterface
                 throw new InvalidActionException('Неизвестное поле запроса');
         }
 
-        $entries = $queryBuilder->execute()->fetchAll(PDO::FETCH_COLUMN);
-        print_r($entries);
+        $results = [];
+        $entryIds = $queryBuilder->execute()->fetchAll(PDO::FETCH_COLUMN);
+        foreach ($entryIds as $entryId) {
+            $results[$entryId] = $entryId;
+        }
 
-        return [];
+        return $results;
     }
 
     /**
