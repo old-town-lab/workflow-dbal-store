@@ -422,11 +422,11 @@ class DBALWorkflowStore implements WorkflowStoreInterface
                 ->set('action_id', ':actionId')
                 ->set('finish_date', ':finishDate')
                 ->set('caller', ':caller')
-                ->where('step_id', 'stepId')
+                ->where('step_id', ':stepId')
                 ->setParameters([
                     'status' => $status,
                     'actionId' => $actionId,
-                    'finishDate' => $finishDate,
+                    'finishDate' => $finishDate ? $finishDate->format(DateTime::ATOM) : null,
                     'caller' => $caller,
                     'stepId' => $step->getId()
                 ]);
